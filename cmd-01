@@ -1,0 +1,17 @@
+1、sed 
+sed 's/old/new/g'  file_name
+全局替换file_name文件中old为new
+
+将文件a.txt中以'.'结尾的替换成'!':        sed -i 's/\.$/\!/g'
+-i: 插入
+$:shell中结尾
+
+
+
+
+
+ls -al /dev/disk/by-id | awk '$11 == "sda" {print $9}' | grep wwn`
+
+2、查看挂载的磁盘: lsblk
+格式化磁盘如ext4, mkdf.ext4 /dev/vd*; 如xfs， mkfs.xfs /dev/vd*
+挂载dev/vdc到/mnt/vdc： mount /dev/vdc /mnt/vdc
